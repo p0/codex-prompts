@@ -5,8 +5,8 @@ import * as path from 'path';
 
 const execAsync = promisify(exec);
 
-const CODEX_REPO_PATH = '/Users/pavel/src/codex/codex-rs';
-const COLLECTION_REPO_PATH = '/Users/pavel/src/codex-prompts';
+const CODEX_REPO_PATH = process.env.CODEX_REPO_PATH || '/Users/pavel/src/codex/codex-rs';
+const COLLECTION_REPO_PATH = process.env.COLLECTION_REPO_PATH || '/Users/pavel/src/codex-prompts';
 
 interface PromptFile {
   sourcePath: string;
